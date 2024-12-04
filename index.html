@@ -35,41 +35,55 @@
 </a>
         </div>
 <div class="header__form">
-  <form id="appointmentForm">
-    <h4>Book Now</h4>
-    <input type="text" id="firstName" placeholder="First Name" required />
-    <input type="text" id="lastName" placeholder="Last Name" required />
-    <input type="text" id="address" placeholder="Address" required />
-    <input type="text" id="phoneNo" placeholder="Phone No." required />
-    <input type="date" id="date" placeholder="Enter Date" required />
-    <button type="submit" class="btn form__btn">Book Appointment</button>
-  </form>
+  
+    <form id="appointmentForm">
+  <label for="firstName">First Name:</label>
+  <input type="text" id="firstName" required><br><br>
+
+  <label for="lastName">Last Name:</label>
+  <input type="text" id="lastName" required><br><br>
+
+  <label for="address">Address:</label>
+  <input type="text" id="address" required><br><br>
+
+  <label for="phoneNo">Phone No.:</label>
+  <input type="text" id="phoneNo" required><br><br>
+
+  <label for="date">Date:</label>
+  <input type="date" id="date" required><br><br>
+
+  <button type="submit">Book Appointment</button>
+    </form>
 </div>
 
 <script>
-// Collect input values
-const firstName = document.getElementById("firstName").value;
-const lastName = document.getElementById("lastName").value;
-const address = document.getElementById("address").value;
-const phoneNo = document.getElementById("phoneNo").value;
-const date = document.getElementById("date").value; // Collecting the date value
+document.getElementById("appointmentForm").addEventListener("submit", function (event) {
+  event.preventDefault();  // Prevent the form from submitting the usual way
 
-// Construct the WhatsApp message
-const message = `Hello, I would like to book an appointment. Here are my details:\n
-  First Name: ${firstName}\n
-  Last Name: ${lastName}\n
-  Address: ${address}\n
-  Phone No.: ${phoneNo}\n
-  Date: ${date}`;  // Adding date to the message
+  // Collect input values
+  const firstName = document.getElementById("firstName").value;
+  const lastName = document.getElementById("lastName").value;
+  const address = document.getElementById("address").value;
+  const phoneNo = document.getElementById("phoneNo").value;
+  const date = document.getElementById("date").value; // Collecting the date value
 
-// Encode the message for URL
-const encodedMessage = encodeURIComponent(message);
+  // Construct the WhatsApp message
+  const message = `Hello, I would like to book an appointment. Here are my details:\n
+    First Name: ${firstName}\n
+    Last Name: ${lastName}\n
+    Address: ${address}\n
+    Phone No.: ${phoneNo}\n
+    Date: ${date}`;  // Adding date to the message
 
-// WhatsApp redirect URL
-const whatsappURL = `https://wa.me/919304197432?text=${encodedMessage}`;
+  // Encode the message for URL
+  const encodedMessage = encodeURIComponent(message);
 
-// Open the URL in the same tab
-window.open(whatsappURL, "_blank");
+  // WhatsApp redirect URL
+  const whatsappURL = `https://wa.me/919304197432?text=${encodedMessage}`;
+
+  // Open the URL in the same tab
+  window.open(whatsappURL, "_blank");
+});
 </script>
 
       </div>
