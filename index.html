@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Mehar Cardiac Clinic| Prince Raj Goswami</title>
+
+  </head>
+  <body>
+    <header>
+      <nav class="section__container nav__container">
+        <div class="nav__logo">Mehar<span> Cardiac Clinic</span></div>
+        <ul class="nav__links">
+          <li class="link"><a href="#home">Home</a></li>
+          <li class="link"><a href="#about">About Us</a></li>
+          <li class="link"><a href="#service">Services</a></li>
+          <li class="link"><a href="https://linkedin.com/in/princebharti49">Developer</a></li>
+          
+        </ul>
+        <a href="https://wa.me/919304197432?text=Hello%2C%20I%20have%20a%20query%20about%20your%20services." class="btn">Contact Us</a>
+        
+        </nav>
+      <div class="section__container header__container" id="home">
+        <div class="header__content">
+          <h1>Providing Expert Cardiac Care with <div class="nav__logo"> <h1><span>Dr. Nirav </h1></span></div></h1>
+          <p>
+            Welcome to the clinic of Dr. Nirav, a renowned heart specialist dedicated to providing exceptional cardiac care. With years of experience, cutting-edge technology, and a patient-first approach, Dr. Nirav ensures your heart health is in expert hands. Trust Dr. Nirav for compassionate care and advanced treatments tailored to your well-being.
+          </p>
+          <a href="#service">
+  <button class="btn">See Services</button>
+</a>
+        </div>
+<div class="header__form">
+  <form id="appointmentForm" class="appointment-form">
+  <h2>Book Now</h2>
+
+  <label for="firstName">First Name:</label>
+  <input type="text" id="firstName" class="input-field" required><br><br>
+
+  <label for="lastName">Last Name:</label>
+  <input type="text" id="lastName" class="input-field" required><br><br>
+
+  <label for="address">Address:</label>
+  <input type="text" id="address" class="input-field" required><br><br>
+
+  <label for="phoneNo">Phone No.:</label>
+  <input type="text" id="phoneNo" class="input-field" required><br><br>
+
+  <label for="date">Date:</label>
+  <input type="date" id="date" class="input-field" required><br><br>
+
+  <button type="submit" class="submit-button">Book Appointment</button>
+  </form>
+    
+
+<script>
+document.getElementById("appointmentForm").addEventListener("submit", function (event) {
+  event.preventDefault();  // Prevent the form from submitting the usual way
+
+  // Collect input values
+  const firstName = document.getElementById("firstName").value;
+  const lastName = document.getElementById("lastName").value;
+  const address = document.getElementById("address").value;
+  const phoneNo = document.getElementById("phoneNo").value;
+  const date = document.getElementById("date").value; // Collecting the date value
+
+  // Construct the WhatsApp message
+  const message = `Hello, I would like to book an appointment. Here are my details:\n
+    First Name: ${firstName}\n
+    Last Name: ${lastName}\n
+    Address: ${address}\n
+    Phone No.: ${phoneNo}\n
+    Date: ${date}`;  // Adding date to the message
+
+  // Encode the message for URL
+  const encodedMessage = encodeURIComponent(message);
+
+  // WhatsApp redirect URL
+  const whatsappURL = `https://wa.me/919304197432?text=${encodedMessage}`;
+
+  // Open the URL in the same tab
+  window.open(whatsappURL, "_blank");
+});
+</script>
+
+      </div>
+    </header>
+<section class="section__container service__container" id="service">
+  <div class="service__header">
+    <div class="service__header__content">
+      <h2 class="section__header">Heart Care Services</h2>
+      <p>
+        We provide specialized services focused on maintaining your heart health and treating cardiovascular conditions.
+        Our heart doctor, Dr. Nirav Kumar, ensures that you receive the best care for all heart-related issues.
+      </p>
+    </div>
+      <a href="https://wa.me/919304197432?text=Hello%2C%20I%20would%20like%20to%20know%20about%20your%20services." class="btn">Ask a Service</a>
+  </div>
+  <div class="service__grid">
+    <!-- Existing Heart Care Services -->
+    <div class="service__card">
+      <span><i class="ri-heart-line"></i></span>
+      <h4>Heart Disease Consultation</h4>
+      <p>
+        Get expert consultation for the diagnosis, treatment, and prevention of heart diseases.
+      </p>
+      <a href="#">Learn More</a>
+    </div>
+    <div class="service__card">
+      <span><i class="ri-heart-pulse-line"></i></span>
+      <h4>ECG & Echo Tests</h4>
+      <p>
+        Advanced Electrocardiogram (ECG) and Echocardiogram (Echo) tests to assess the heart's electrical activity and function.
+      </p>
+      <a href="#">Learn More</a>
+    </div>
+    <div class="service__card">
+      <span><i class="ri-heart-2-line"></i></span>
+      <h4>Cardiac Surgery</h4>
+      <p>
+        Comprehensive heart surgery services, including coronary artery bypass grafting (CABG), valve repairs, and more.
+      </p>
+      <a href="#">Learn More</a>
+    </div>
+    <div class="service__card">
+      <span><i class="ri-hospital-line"></i></span>
+      <h4>Heart Failure Management</h4>
+      <p>
+        Expert management for heart failure, including medications, lifestyle changes, and advanced treatments.
+      </p>
+      <a href="#">Learn More</a>
+    </div>
+
+    <!-- New Services: Blood Tests and Medical Store -->
+    <div class="service__card">
+  <span><i class="ri-drop-line"></i></span>
+  <h4>Blood Tests</h4>
+  <p>
+    Comprehensive blood tests including RFT, KFT, LFT, CBC, and more for accurate diagnosis.
+  </p>
+  <a href="#">Learn More</a>
+</div>
+    <div class="service__card">
+      <span><i class="ri-store-2-line"></i></span>
+      <h4>Medical Store Facilities</h4>
+      <p>
+        On-site medical store with a wide range of medicines for heart-related and general health needs.
+      </p>
+      <a href="#">Visit Store</a>
+    </div>
+  </div>
+</section>
+<hr>
+
+    <section class="section__container about__container" id="about">
+      <div class="about__content">
+        <h2 class="section__header">About Us</h2>
+        <p>
+          Welcome to Mehar Cardiac Clinic, where your heart health is our priority. Led by Dr. Nirav, a highly skilled and compassionate heart specialist, we offer comprehensive cardiac care tailored to your needs. With a focus on advanced technology and patient-centric care, we ensure the highest quality treatments to protect and improve your heart health. Alongside personalized medical services, we provide valuable tips and resources to help you maintain a heart-healthy lifestyle. At Mehar Cardiac Clinic, we are committed to supporting you every step of the way on your journey to a healthier, stronger heart.
+
+Our dedicated team is here to provide guidance, answer your questions, and deliver compassionate care in a comfortable and welcoming environment. Together, we strive to make every visit a step closer to your optimal well-being and peace of mind.
+<br>
+<br>
+Trust Dr. Nirav and our team to guide you on your journey to a healthier, stronger heart.
+
+        </p>
+      </div>
+      <div class="about__image">
+        <img src="about.jpg" alt="about" />
+      </div>
+    </section>
+
+<hr>
+
+    <section class="section__container why__container" id="blog">
+      <div class="why__image">
+<img src="about.jpg" alt="assets/about.jpg">
+        
+      </div>
+      <div class="why__content">
+        <h2 class="section__header">Why Choose Us</h2>
+        <p>
+          With a steadfast commitment to your well-being, our team of highly
+          trained healthcare professionals ensures that you receive nothing
+          short of exceptional patient experiences.
+        </p>
+        <div class="why__grid">
+          <span><i class="ri-hand-heart-line"></i></span>
+          <div>
+            <h4>Intensive Care</h4>
+            <p>
+              Our Intensive Care Unit is equipped with advanced technology and
+              staffed by a team of professionals.
+            </p>
+          </div>
+          <span><i class="ri-truck-line"></i></span>
+          <div>
+            <h4>Medicine Facilities</h4>
+            <p>
+              Mehar Cardiac Clinic provides a well-stocked pharmacy with quality medications and expert guidance from our pharmacists.
+            </p>
+          </div>
+          <span><i class="ri-hospital-line"></i></span>
+          <div>
+            <h4>Medical and Surgical</h4>
+            <p>
+              Our Medical and Surgical services offer advanced healthcare
+              solutions to address medical needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <hr>
+    
+    <section id="doctor">
+  <div class="section__container">
+    <h2 class="section__header" style="text-align: center;">Our Doctor</h2>
+    <br>
+    <div class="doctor__container">
+      <div class="doctor__image">
+        
+       <img src="about.jpg" alt="Dr. Nirav Kumar" class="mobile-center">
+
+<style>
+  /* Default styling for larger screens */
+  .mobile-center {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Center image only on mobile */
+  @media only screen and (max-width: 768px) {
+    .mobile-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+</style>
+
+      </div>
+      <div class="doctor__details">
+        <h3>Dr. Nirav Kumar</h3>
+        <p><strong>Specialization:</strong> Cardiologist</p>
+        <p><strong>Experience:</strong> 10+ years</p>
+        <p><strong>Qualification:</strong> MBBS, MD (General Medicine),DNB (Cardiology), FNB (Interventional Cardiology)</p>
+        <p><strong>About:</strong> Dr. Nirav Kumar (Ex. Prof(Dr) at IGIMS Patna) is a highly skilled cardiologist with over 10 years of experience. He is committed to providing personalized care and treatment for heart patients, using the latest medical technology.</p>
+<a href="https://wa.me/919304197432?text=Hi%20there!%20I%20want%20to%20book%20an%20appointment." class="btn" target="_blank">Book an Appointment </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <h4>Contact Us</h4>
+          <ul>
+  <li><i class="fas fa-map-marker-alt"></i> Akaswani Road, Oppo. Shiv Mandir, Khajpura, Patna-800014</li>
+  <li><i class="fas fa-envelope-open-text"></i> <a href="mailto:info@meharcardiacclinic.com">info@meharcardiacclinic.com</a></li>
+  <li><i class="fas fa-mobile-alt"></i> (+91) 95237 62252, 70705 72665</li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#service">Services</a></li>
+            <li><a href="https://linkedin.com/in/princebharti49">Developer</a></li>
+            
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Follow Us</h4>
+          <div class="footer__socials">
+               <span><a href="https://www.linkedin.com/in/princebharti49" target="_blank"><i class="ri-linkedin-box-fill"></i></a></span>
+      <span><a href="https://github.com/princebharti49" target="_blank"><i class="ri-github-fill"></i></a></span>
+      <span><a href="https://www.instagram.com/princebharti49" target="_blank"><i class="ri-instagram-line"></i></a></span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024 Mehar Cardiac Clinic. All rights reserved.</p>
+        <p>Made with 💝 by Prince Raj Goswami</p>
+      </div>
+    </footer>
+  </body>
+</html>
