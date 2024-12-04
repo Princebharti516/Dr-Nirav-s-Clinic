@@ -36,28 +36,17 @@
 </a>
         </div>
 <div class="header__form">
-  <form id="appointmentForm" class="appointment-form">
-  <h2>Book Now</h2>
-
-  <label for="firstName">First Name:</label>
-  <input type="text" id="firstName" class="input-field" required><br><br>
-
-  <label for="lastName">Last Name:</label>
-  <input type="text" id="lastName" class="input-field" required><br><br>
-
-  <label for="address">Address:</label>
-  <input type="text" id="address" class="input-field" required><br><br>
-
-  <label for="phoneNo">Phone No.:</label>
-  <input type="text" id="phoneNo" class="input-field" required><br><br>
-
-  <label for="date">Date:</label>
-  <input type="date" id="date" class="input-field" required><br><br>
-
-  <button type="submit" class="submit-button">Book Appointment</button>
+  <form id="appointmentForm">
+    <h4>Book Now</h4>
+    <input type="text" id="firstName" placeholder="First Name" required />
+    <input type="text" id="lastName" placeholder="Last Name" required />
+    <input type="text" id="address" placeholder="Address" required />
+    <input type="text" id="phoneNo" placeholder="Phone No." required />
+    <input type="date" id="date"
+    placeholder="Enter Date" required />
+    <button type="submit" class="btn form__btn">Book Appointment</button>
   </form>
-    
-
+</div>
 <script>
 document.getElementById("appointmentForm").addEventListener("submit", function (event) {
   event.preventDefault();  // Prevent the form from submitting the usual way
