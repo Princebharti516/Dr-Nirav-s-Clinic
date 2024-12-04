@@ -206,7 +206,26 @@ Trust Dr. Nirav and our team to guide you on your journey to a healthier, strong
     <br>
     <div class="doctor__container">
       <div class="doctor__image">
-        <img src="about.jpg" alt="Dr. Nirav Kumar">
+        
+        <img src="assets/about.jpg" alt="Dr. Nirav Kumar" class="mobile-center">
+
+<style>
+  /* Default styling for larger screens */
+  .mobile-center {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Center image only on mobile */
+  @media only screen and (max-width: 768px) {
+    .mobile-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+</style>
+        
       </div>
       <div class="doctor__details">
         <h3>Dr. Nirav Kumar</h3>
