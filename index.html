@@ -41,36 +41,35 @@
     <input type="text" id="lastName" placeholder="Last Name" required />
     <input type="text" id="address" placeholder="Address" required />
     <input type="text" id="phoneNo" placeholder="Phone No." required />
+    <input type="date" id="date" placeholder="Enter Date" required />
     <button type="submit" class="btn form__btn">Book Appointment</button>
   </form>
 </div>
 
 <script>
-  document.getElementById("appointmentForm").addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent the form from submitting normally
+// Collect input values
+const firstName = document.getElementById("firstName").value;
+const lastName = document.getElementById("lastName").value;
+const address = document.getElementById("address").value;
+const phoneNo = document.getElementById("phoneNo").value;
+const date = document.getElementById("date").value; // Collecting the date value
 
-    // Collect input values
-    const firstName = document.getElementById("firstName").value;
-    const lastName = document.getElementById("lastName").value;
-    const address = document.getElementById("address").value;
-    const phoneNo = document.getElementById("phoneNo").value;
+// Construct the WhatsApp message
+const message = `Hello, I would like to book an appointment. Here are my details:\n
+  First Name: ${firstName}\n
+  Last Name: ${lastName}\n
+  Address: ${address}\n
+  Phone No.: ${phoneNo}\n
+  Date: ${date}`;  // Adding date to the message
 
-    // Construct the WhatsApp message
-    const message = `Hello, I would like to book an appointment. Here are my details:\n
-      First Name: ${firstName}\n
-      Last Name: ${lastName}\n
-      Address: ${address}\n
-      Phone No.: ${phoneNo}`;
+// Encode the message for URL
+const encodedMessage = encodeURIComponent(message);
 
-    // Encode the message for URL
-    const encodedMessage = encodeURIComponent(message);
+// WhatsApp redirect URL
+const whatsappURL = `https://wa.me/919304197432?text=${encodedMessage}`;
 
-    // WhatsApp redirect URL
-    const whatsappURL = `https://wa.me/919304197432?text=${encodedMessage}`;
-
-    // Open the URL in the same tab
-    window.open(whatsappURL, "_blank");
-  });
+// Open the URL in the same tab
+window.open(whatsappURL, "_blank");
 </script>
 
       </div>
