@@ -9,7 +9,7 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css" />
     <title>Mehar Cardiac Clinic| Prince Raj Goswami</title>
-<script>
+<style>
     body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f9;
@@ -66,7 +66,7 @@ label {
 .submit-button:hover {
   background-color: #45a049;
 }
-</script>
+</styles>
   </head>
   <body>
     <header>
@@ -93,8 +93,7 @@ label {
 </a>
         </div>
 <div class="header__form">
-  
-    <form id="appointmentForm" class="appointment-form">
+  <form id="appointmentForm" class="appointment-form">
   <h2>Book Now</h2>
 
   <label for="firstName">First Name:</label>
@@ -113,9 +112,8 @@ label {
   <input type="date" id="date" class="input-field" required><br><br>
 
   <button type="submit" class="submit-button">Book Appointment</button>
-    </form>
-
-</div>
+  </form>
+    
 
 <script>
 document.getElementById("appointmentForm").addEventListener("submit", function (event) {
