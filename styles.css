@@ -677,3 +677,99 @@ footer {
   justify-content: center; /* Center-align social media icons */
 }
 
+
+/* General Body Settings */
+
+body {
+
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  background-color: #f4f4f4;
+
+}
+
+
+
+/* Gallery Section */
+
+#gallery {
+
+  text-align: center;
+
+  padding: 20px;
+
+}
+
+
+
+.gallery {
+
+  width: 100%;
+
+  overflow: hidden; /* Hide overflowing content */
+
+  position: relative;
+
+  white-space: nowrap;
+
+}
+
+
+
+.gallery-container {
+
+  display: inline-flex;
+
+  gap: 20px;
+
+  animation: scroll 50s linear infinite; /* Smooth scrolling animation */
+
+}
+
+
+
+/* Image Styling: Force Landscape */
+
+.gallery img {
+
+  width: 300px; /* Fixed width for landscape */
+
+  height: 200px; /* Fixed height for landscape */
+
+  object-fit: cover; /* Force landscape aspect ratio */
+
+  border-radius: 10px;
+
+  transition: transform 0.3s ease;
+
+}
+
+
+
+.gallery img:hover {
+
+  transform: scale(1.1); /* Hover effect */
+
+}
+
+
+
+/* Auto-Scroll Animation */
+
+@keyframes scroll {
+
+  from {
+
+    transform: translateX(0);
+
+  }
+
+  to {
+
+    transform: translateX(-100%);
+
+  }
+
+}
